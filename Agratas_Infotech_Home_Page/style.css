@@ -221,7 +221,7 @@ body {
   background-color:#0056b3;
   color: white;
   text-decoration: underline;
-  
+  overflow: hidden;
   border: none;
   border-radius: 10px;
   cursor: pointer;
