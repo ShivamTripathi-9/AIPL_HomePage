@@ -212,25 +212,6 @@ body {
 }
 
 
-.middle-button {
-  position: absolute;
-  top:38%; /* Adjust this value for exact placement */
-  left: 50%;
-  transform: translateX(-50%); /* Centers the button horizontally */
-  padding: 10px 25px;
-  background-color:#0056b3;
-  color: white;
-  text-decoration: underline;
-  overflow: hidden;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.middle-button:hover {
-  background-color: rgb(28, 23, 23);
-}
 
 /* The dots/bullets/indicators */
 .dot {
