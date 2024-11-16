@@ -1,19 +1,21 @@
 // script.js
 const leftButton = document.querySelector(".slider__btn-left");
 const rightButton = document.querySelector(".slider__btn-right");
+const slider = document.querySelector(".slider");
 
 let currentSlide = 0;
 const slides = [
   "image/Hackathon.jpg",
   "image/internship.webp",
   "image/internspace.webp"
-]; // Replace with your images
-const slider = document.querySelector(".slider");
+];
 
+// Function to Update Slide
 function updateSlide(index) {
   slider.style.backgroundImage = `url(${slides[index]})`;
 }
 
+// Event Listeners for Navigation
 leftButton.addEventListener("click", () => {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   updateSlide(currentSlide);
@@ -24,13 +26,11 @@ rightButton.addEventListener("click", () => {
   updateSlide(currentSlide);
 });
 
-
 // Automatic Sliding
 setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   updateSlide(currentSlide);
 }, 5000); // Change slide every 5 seconds
 
-
-// Initialize the first slide
+// Initialize the First Slide
 updateSlide(currentSlide);
