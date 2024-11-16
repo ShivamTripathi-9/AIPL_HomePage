@@ -1,19 +1,28 @@
-let slideIndex = 0;
-showSlides();
+// script.js
+const leftButton = document.querySelector(".slider__btn-left");
+const rightButton = document.querySelector(".slider__btn-right");
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+let currentSlide = 0;
+const slides = [
+  "image/Hackathon.jpg",
+  "image/internship.webp",
+  "image/internspace.webp"
+]; // Replace with your images
+const slider = document.querySelector(".slider");
+
+function updateSlide(index) {
+  slider.style.backgroundImage = `url(${slides[index]})`;
 }
+
+leftButton.addEventListener("click", () => {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlide(currentSlide);
+});
+
+rightButton.addEventListener("click", () => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlide(currentSlide);
+});
+
+// Initialize the first slide
+updateSlide(currentSlide);
