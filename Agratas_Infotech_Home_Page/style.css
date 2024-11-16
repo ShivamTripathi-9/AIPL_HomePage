@@ -533,15 +533,18 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  background: rgba(0, 0, 0, .5);
+  /* width: 100%; */
+  /* background: rgba(0, 0, 0, .5); */
+  
 }
 
 .slider--title {
   font-size: 2.5rem;
-  color: #fff;
+  /* color: #fff; */
+  color:yellow;
   text-transform: uppercase;
   font-weight: 700;
+
 }
 
 .slider--text {
@@ -553,15 +556,19 @@ html {
 
 .slider--btn {
   background: #fff;
+  border-radius: 5px;
+  font: 1em sans-serif;
   text-transform: uppercase;
+  width: auto;
   border: none;
   color: #444;
-  border: 1px solid #444;
+  /* border: 1px solid #444; */
   outline: none;
-  font-weight: 700;
+  font-weight: 500;
   padding: 0.8rem 2rem;
   cursor: pointer;
   margin-top: 1.5rem;
+  white-space: nowrap;
 }
 
 .slider--btn:hover {
@@ -573,7 +580,7 @@ html {
   top: 50%;
   transform: translateY(-50%);
   background: none;
-  border: none;
+  /* border: none; */
   color: #fff;
   font-size: 2.5rem;
   cursor: pointer;
@@ -585,12 +592,15 @@ html {
   background: transparent;
   border: none;
   outline: none;
-  font-size: 4rem;
+  font-size: 2rem;
   color: #eee;
-  padding: 0 1rem;
+  background-color: #000;
+  /* color: yellow; */
+  /* padding: 0 1rem; */
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
   z-index: 3;
+  margin: 570px;
 }
 
 .slider__btn-left:hover,
@@ -609,13 +619,14 @@ html {
   }
 
   .slider--btn {
-    padding: 0.6rem 1.5rem;
+    /* padding: 0.6rem 1.5rem; */
     font-size: 0.9rem;
   }
 
   .slider__btn-right,
   .slider__btn-left {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
+    margin: 100px;
   }
 }
 
