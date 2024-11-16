@@ -531,6 +531,7 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
+  background: rgba(0, 0, 0, .5);
 }
 
 .slider--title {
@@ -563,6 +564,17 @@ html {
 .slider--btn:hover {
   background: #444;
   color: #fff;
+}
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .slider__btn-right,
