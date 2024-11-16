@@ -511,7 +511,7 @@ html {
   height: 100vh;
   width: 100%;
   position: relative;
-  background:url(image/Hackathon.jpg);
+  /* background:url(image/internspace.webp); */
 }
 
 .slider--content {
