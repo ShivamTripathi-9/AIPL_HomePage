@@ -497,11 +497,11 @@ nav.scrolled {
 
 /*---------------------------------- IMAGE SLIDER -------------------------------------*/
 /* Ensure body takes full width and height */
-body,
+/* body,
 html {
   height: 100%;
   margin: 0;
-}
+} */
 
 /* The slider container covers the full viewport height */
 .slider {
@@ -512,6 +512,10 @@ html {
   width: 100%;
   position: relative;
   /* background:url(image/internspace.webp); */
+  position: relative;
+  justify-content: center;
+  display: flex;
+  
 }
 
 .slider--content {
@@ -602,7 +606,7 @@ html {
   }
 
   .slider--text {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .slider--btn {

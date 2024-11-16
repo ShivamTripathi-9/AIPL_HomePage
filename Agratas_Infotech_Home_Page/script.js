@@ -27,8 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
           option.classList.remove("scrolled");
           isNavGrey = false;
           console.log("Navbar and menu color reset when menu closed");
+          
         }
-      });
+      });  
   
       window.addEventListener("scroll", function () {
         const scrollableHeight =

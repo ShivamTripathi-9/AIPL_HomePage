@@ -24,5 +24,13 @@ rightButton.addEventListener("click", () => {
   updateSlide(currentSlide);
 });
 
+
+// Automatic Sliding
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlide(currentSlide);
+}, 5000); // Change slide every 5 seconds
+
+
 // Initialize the first slide
 updateSlide(currentSlide);
