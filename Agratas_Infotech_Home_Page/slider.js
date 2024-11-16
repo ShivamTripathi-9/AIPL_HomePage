@@ -5,17 +5,17 @@ const slider = document.querySelector(".slider");
 
 let currentSlide = 0;
 const slides = [
-  "image/Hackathon.jpg",
+ "image/Hackathon.jpg",
   "image/internship.webp",
-  "image/internspace.webp"
+  "image/internspace.webp",
 ];
 
-// Function to Update Slide
+// Function to update the slide
 function updateSlide(index) {
   slider.style.backgroundImage = `url(${slides[index]})`;
 }
 
-// Event Listeners for Navigation
+// Event Listeners for Buttons
 leftButton.addEventListener("click", () => {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   updateSlide(currentSlide);
@@ -26,7 +26,7 @@ rightButton.addEventListener("click", () => {
   updateSlide(currentSlide);
 });
 
-// Automatic Sliding
+// Auto-Sliding Feature
 setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   updateSlide(currentSlide);
