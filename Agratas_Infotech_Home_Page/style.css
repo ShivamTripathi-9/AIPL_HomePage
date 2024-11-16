@@ -515,7 +515,7 @@ html {
   position: relative;
   justify-content: center;
   display: flex;
-  
+
 }
 
 .slider--content {
@@ -580,23 +580,27 @@ html {
   cursor: pointer;
   z-index: 2;
 }
-
-.slider__btn-right,
-.slider__btn-left {
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 4rem;
-  color: #eee;
-  padding: 0 1rem;
-  cursor: pointer;
-  transition: transform 0.1s ease-in-out;
+/* Hero Buttons */
+.hero-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   z-index: 3;
 }
 
-.slider__btn-left:hover,
-.slider__btn-right:hover {
-  transform: scale(0.95);
+.hero-buttons .btn {
+  padding: 10px 15px;
+  margin: 5px;
+  text-decoration: none;
+  color: #fff;
+  background: #444;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.hero-buttons .btn:hover {
+  background: #666;
 }
 
 /* Responsive Design Adjustments */
@@ -614,8 +618,7 @@ html {
     font-size: 0.9rem;
   }
 
-  .slider__btn-right,
-  .slider__btn-left {
+  .hero-buttons .btn {
     font-size: 2.5rem;
   }
 }
