@@ -493,56 +493,123 @@ nav.scrolled {
   }
 }
 
+/* Slider start */
 
-/* Slideshow container */
-.slideshow-container {
-
-  /* max-width: 1000px; */
-  max-width: 100%;
-  max-height: 30%;
-  /* position: fixed; */
-  margin: auto;
-  background-color: #000;
+/*---------------------------------- IMAGE SLIDER -------------------------------------*/
+/* Ensure body takes full width and height */
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
-
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+/* The slider container covers the full viewport height */
+.slider {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Make sure the image covers the full area */
+  height: 100vh;
+  width: 100%;
+  position: relative;
 }
 
-.active {
-  background-color: #717171;
+.slider--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+/* Center the content */
+.slider--feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+.slider--title {
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+.slider--text {
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
 }
 
+.slider--btn {
+  background: #fff;
+  text-transform: uppercase;
+  border: none;
+  color: #444;
+  border: 1px solid #444;
+  outline: none;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
 
+.slider--btn:hover {
+  background: #444;
+  color: #fff;
+}
 
+.slider__btn-right,
+.slider__btn-left {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 4rem;
+  color: #eee;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  z-index: 3;
+}
 
-/*slider image end*/
+.slider__btn-left:hover,
+.slider__btn-right:hover {
+  transform: scale(0.95);
+}
 
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .slider--title {
+    font-size: 1.8rem;
+  }
+
+  .slider--text {
+    font-size: 0.9rem;
+  }
+
+  .slider--btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .slider__btn-right,
+  .slider__btn-left {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .slider {
+    background-size: cover;
+    background-attachment: fixed; /* Add parallax effect */
+  }
+}
+/* Slider end */
 
 .cardtoAIPL
 {
