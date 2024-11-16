@@ -511,6 +511,7 @@ html {
   height: 100vh;
   width: 100%;
   position: relative;
+  background:url(image/Hackathon.jpg);
 }
 
 .slider--content {
@@ -610,6 +611,8 @@ html {
   }
 }
 /* Slider end */
+
+
 
 .cardtoAIPL
 {
