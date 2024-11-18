@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   
+  
 }
 
 
@@ -239,7 +240,7 @@ nav.scrolled {
 }
 
 
-/* CSS for the address bar */
+
 .address-bar-container {
   position: fixed;
   left: 0;
@@ -474,7 +475,7 @@ nav.scrolled {
     font-size: 16px;
   }
   .submenu {
-     display: none; /* Ensure submenu only appears on hover */
+     display: none; 
 }
 }
 
@@ -495,26 +496,17 @@ nav.scrolled {
 
 /* Slider start */
 
-/*---------------------------------- IMAGE SLIDER -------------------------------------*/
-/* Ensure body takes full width and height */
-/* body,
-html {
-  height: 100%;
-  margin: 0;
-} */
 
-/* The slider container covers the full viewport height */
 .slider {
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; /* Make sure the image covers the full area */
-  height: 100vh;
+  /* background-repeat: no-repeat; */
+  background-size: cover; 
+  height: 70vh;
   width: 100%;
-  position: relative;
-  /* background:url(image/internspace.webp); */
   position: relative;
   justify-content: center;
   display: flex;
+  margin-top: 73px;
 }
 
 .slider--content {
@@ -538,31 +530,23 @@ html {
   
 }
 
-.slider--title {
-  font-size: 2.5rem;
-  /* color: #fff; */
-  color:yellow;
-  text-transform: uppercase;
-  font-weight: 700;
-
-}
-
+/* 
 .slider--text {
   font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
   margin: 0.5rem 0;
-}
+} */
 
 .slider--btn {
-  background: #fff;
+  background: #070aad;
   border-radius: 5px;
   font: 1em sans-serif;
   text-transform: uppercase;
   width: auto;
   border: none;
-  color: #444;
-  /* border: 1px solid #444; */
+  color: white;
+  /* border: 10px solid; */
   outline: none;
   font-weight: 500;
   padding: 0.8rem 2rem;
@@ -595,45 +579,142 @@ html {
   font-size: 2rem;
   color: #eee;
   background-color: #000;
-  /* color: yellow; */
-  /* padding: 0 1rem; */
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
   z-index: 3;
-  margin: 570px;
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+}
+
+
+.slider__btn-left {
+  left: -580px; 
+}
+
+
+.slider__btn-right {
+  right: -580px; 
 }
 
 .slider__btn-left:hover,
 .slider__btn-right:hover {
   transform: scale(0.95);
 }
+.login-btn {
+  position: absolute;
+  bottom: 70px; 
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); 
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: flex; 
+  gap: 15px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  white-space: nowrap;
+  margin-left: -550px;
+}
+
+.login-btn .btn {
+  text-decoration: none;
+  color: #fff;
+  background: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px; 
+  
+}
+
+.login-btn .btn.signup {
+  background-color: rgb(196, 14, 14);
+}
+
+.login-btn .btn.signin {
+  background-color: rgb(196, 14, 14);; 
+}
+
+.login-btn .btn:hover {
+  transform: scale(1.05);
+  background-color: #0056b3; 
+}
+
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
+  .slider {
+    height: 50vh; 
+    background-size: contain; 
+  }
   .slider--title {
     font-size: 1.8rem;
   }
 
-  .slider--text {
-    font-size: 1rem;
-  }
 
   .slider--btn {
     /* padding: 0.6rem 1.5rem; */
     font-size: 0.9rem;
+    padding: 3px 15px; 
+  }
+  .slider__btn-left,
+  .slider__btn-right {
+    font-size: 1.5rem; /* Reduce button size */
   }
 
-  .slider__btn-right,
   .slider__btn-left {
-    /* font-size: 2.5rem; */
-    margin: 100px;
+    left: -150px; /* Position closer to the left edge */
+  }
+
+  .slider__btn-right {
+    right: -150px; /* Position closer to the right edge */
+  }
+  .login-btn {
+    bottom: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column; 
+    gap: 10px; 
+    margin-left: -170px; 
+    margin-top: 10x;
+    white-space: nowrap;
+  }
+
+  .login-btn .btn {
+    padding: 3px 15px; 
+    width: 100%; 
+    text-align: center; 
   }
 }
 
 @media (min-width: 768px) {
   .slider {
     background-size: cover;
-    background-attachment: fixed; /* Add parallax effect */
+    background-attachment: fixed; 
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 40vh; 
+    background-size: cover; 
+    padding: 10px; 
+  }
+  .slider__btn-left,
+  .slider__btn-right {
+    font-size: 1.5rem; /* Reduce button size */
+  }
+
+  .slider__btn-left {
+    left: 10px; /* Position closer to the left edge */
+  }
+
+  .slider__btn-right {
+    right: 10px; /* Position closer to the right edge */
   }
 }
 /* Slider end */
